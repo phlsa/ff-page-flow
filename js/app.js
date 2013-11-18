@@ -1,3 +1,5 @@
+var transitionType = 'type-1';
+
 $( document ).ready( function() {
 
 	$( '.page1' ).click(function() {
@@ -12,6 +14,20 @@ $( document ).ready( function() {
 	$( '.back' ).click(function() {
 		$('.page1').removeClass('out-left');
 		$('.page2').addClass('out-right');
+	});
+
+
+
+
+
+	$('li').click(function( e ) {
+		$('.browser-window').removeClass(transitionType);
+
+		$('li').removeClass('selected');
+		$(e.currentTarget).addClass('selected');
+		transitionType = $(e.currentTarget).attr('id');
+
+		$('.browser-window').addClass(transitionType);
 	});
 
 });

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Pageload prototype</title>
   <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/options.css">
   <script type="text/javascript" src="./js/jquery.js"></script>
   <script type="text/javascript" src="./js/underscore.js"></script>
   <script type="text/javascript" src="./js/app.js"></script>
 </head>
 <body>
-  <div class="browser-window">
+  <div class="browser-window type-1">
     <div class="content">
       <div class="page1">
         <div class="loader">
@@ -22,6 +24,17 @@
       </div>
     </div>
     <div class="back"></div>
+  </div>
+
+  <ul>
+    <li id="type-1" class="selected">Type 1</li>
+    <li id="type-2">Type 2</li>
+    <li id="type-3">Type 3</li>
+  </ul>
+
+  <div class="infobar">
+    Click any link on the page. The back button works (even though it doesn't look enabled)
+    <!-- <input type="checkbox" class="slo-mo"></input> Slo-mo -->
   </div>
 </body>
 </html>

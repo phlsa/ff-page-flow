@@ -1,0 +1,28 @@
+* {
+	font-family: Helvetica, sans-serif;
+}
+
+.infobar {
+	position: absolute;
+	top: 10px;
+	right: 90px;
+}
+
+ul {
+	position: absolute;
+	top: -10px;
+	list-style: none;
+	margin-left: 20px;
+}
+
+li {
+	float: left;
+	margin-right: 20px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+li.selected {
+	color: #fff;
+	background: #333;
+}
