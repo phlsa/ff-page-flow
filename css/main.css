@@ -20,18 +20,27 @@
 	width: 1010px;
 	height: 616px;
 	background-size: 100%;
-	transition: all .3s ease;
 	transform: translate(0,0);
 }
 
 .page1 { background-image: url('../img/nyt.png') }
 .page2 { background-image: url('../img/nyt2.png') }
 
+.type-1 .page1, .type-1 .page2 {
+	transition: all .3s ease;
+}
+
+
 .out-left { transform: translate( -1010px, 0 ) }
 .out-right { transform: translate( 1010px, 0 ) }
-.half-in-right { transform: translate( 930px, 0 ) }
-.half-out-left {
+
+.type-1 .half-in-right { transform: translate( 930px, 0 ) }
+.type-1 .half-out-left {
 	transform: translate( -80px, 0 );
+	/*opacity: .2;*/
+}
+
+.type-3 .half-out-left {
 	opacity: .2;
 }
 
@@ -43,15 +52,14 @@
 	transition: all .3s ease;
 }
 
+.type-2 .loader, .type-3 .loader, .type-4 .loader {
+	display: none;
+}
+
 .half-in-right .loader { opacity: 1 }
 
-.spinner {
+.spinner, .small-spinner {
 	position: absolute;
-	top: 50%;
-	margin-top: -30px;
-	left: 10px;
-	width: 60px;
-	height: 60px;
 	background-image: url('../img/spinner-blue.png');
 	background-size: 100%;
 	animation: rotate .8s linear infinite;
@@ -59,6 +67,20 @@
 @keyframes rotate {
 	from { transform: rotate(0) }
 	to   { transform: rotate(360deg) }
+}
+.spinner {
+	top: 50%;
+	margin-top: -30px;
+	left: 10px;
+	width: 60px;
+	height: 60px;
+}
+.small-spinner {
+	top: 51px;
+	left: 141px;
+	width: 16px;
+	height: 16px;
+	display: none;
 }
 
 
