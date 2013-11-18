@@ -1,4 +1,4 @@
-var transitionType = 'type-1';
+var transitionType = 'type-4';
 
 $( document ).ready( function() {
 
